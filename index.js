@@ -7,6 +7,6 @@ app.get('/', (req, res) => {
     res.json({url:"https://www.google.com/"})
 });
 
-app.listen(port, '192.168.1.56', () => {
+app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });
