@@ -3,72 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Card</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-        .phone-card {
-            width: 90%;
-            max-width: 350px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            text-align: center;
-        }
-        .phone-card img {
-            width: 100%;
-            height: auto;
-            border-bottom: 1px solid #ddd;
-        }
-        .phone-details {
-            padding: 15px;
-        }
-        .phone-name {
-            font-size: 1.4em;
-            font-weight: bold;
-            color: #333;
-        }
-        .phone-price {
-            font-size: 1.2em;
-            color: #27ae60;
-            margin: 10px 0;
-        }
-        .buy-button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .buy-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Business Card</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-    <div class="phone-card">
-        <img src="<%= phone.image %>" alt="Phone Image">
-        <div class="phone-details">
-            <div class="phone-name"><%= phone.name %></div>
-            <div class="phone-price">$<%= phone.price %></div>
-            <a href="<%= phone.buyLink %>" class="buy-button">Buy Now</a>
+    <div class="business-card">
+        <div class="logo-section">
+            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg" alt="Company Logo" class="logo">
+            <h2>FAVORITES</h2>
+            <p class="tagline">YOUR SOLUTION HERE</p>
+        </div>
+
+        <div class="info-section">
+            <h1><%= name %> <span class="highlight"><%= surname %></span></h1>
+            <p class="position"><%= position %></p>
+            
+            <div class="contact-details">
+                <p>📞 : <%= phone %></p>
+                <p>✉️ : <%= email %></p>
+                <p>🌐 : <%= website %></p>
+                <p>📍 : <%= address %></p>
+            </div>
         </div>
     </div>
 
